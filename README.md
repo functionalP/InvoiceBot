@@ -1,2 +1,2 @@
 # SlackBots
-Building Bots
+Building Invoice assistant
