@@ -134,7 +134,7 @@ function constructShowIssuesMessage(message) {
                 "actions": [
                     {
                         "name": "fix",
-                        "text": "Recommend fixes",
+                        "text": "Need Help?",
                         "type": "button",
                     }
                 ]
