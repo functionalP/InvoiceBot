@@ -156,7 +156,7 @@ function constructOptionsMessage(message)   {
                 "type": "button",
                 "value": "Option 1",
                 "confirm": {
-                    "title": "Are you sure?",
+                    "title": "Are you sure you want to re-submit the invoice?",
                     "ok_text": "Yes",
                     "dismiss_text": "No"
                 }
@@ -167,7 +167,7 @@ function constructOptionsMessage(message)   {
                 "type": "button",
                 "value": "Option 2",
                 "confirm": {
-                    "title": "Are you sure?",
+                    "title": "Are you sure you want to re-submit the invoice?",
                     "ok_text": "Yes",
                     "dismiss_text": "No"
                 }
@@ -179,7 +179,7 @@ function constructOptionsMessage(message)   {
                 "value": "Option 3",
                 "style": "primary",
                 "confirm": {
-                    "title": "Are you sure?",
+                    "title": "Are you sure you want to re-submit the invoice?",
                     "ok_text": "Yes",
                     "dismiss_text": "No"
                 }
@@ -223,7 +223,7 @@ function submitInvoice(bot, message) {
         attachments.push(
             {
                 "color": "#f2c407",
-                "text": "• Prices :white_check_mark:",
+                "text": "Prices :white_check_mark:",
                 "mrkdwn_in": ["text"]
             });
         var rules_check = {
@@ -236,7 +236,7 @@ function submitInvoice(bot, message) {
                     attachments.push(
                         {
                             "color": "#f2c407",
-                            "text": "• Quantities :white_check_mark:",
+                            "text": "Quantities :white_check_mark:",
                             "mrkdwn_in": ["text"]
                         });
                     var rules_check = {
@@ -248,7 +248,7 @@ function submitInvoice(bot, message) {
                             attachments.push(
                                 {
                                     "color": "#f2c407",
-                                    "text": "• Other rules :white_check_mark:",
+                                    "text": "Other rules :white_check_mark:",
                                     "mrkdwn_in": ["text"]
                                 });
                             var rules_check = {
@@ -268,7 +268,7 @@ function submitInvoice(bot, message) {
                                         var attachments = getAttachments();
                                         attachments.push({
                                             "color": "#f2c407",
-                                            "text": "*@" + real_name + "* selected " + message.text +". \n All rules checked :white_check_mark: \n *Success!* *<https://123123.com|Invoice #" + invoice + ">* created and submitted to herge oil :white_check_mark: ",
+                                            "text": "*@" + real_name + "* selected " + message.text +". \n All rules checked :white_check_mark: \n *Success!* *<https://123123.com|Invoice #" + invoice + ">* created and submitted to <https://google.com|Herge Oil> :white_check_mark: ",
                                             "mrkdwn_in": ["text"]
                                         });
                                         attachments.push({
@@ -321,16 +321,16 @@ function getAttachments()   {
         {
             "mrkdwn_in": ["text"],
             "color": "#f2c407",
-            "text": "•  Buyer rejected the invoice due to quantity mismatch –  5 laptops received instead of 10 invoiced *<https://www.ariba.com|more>*\n• I have also identified price variance of 5%. PO Price for laptop is $2000 vs invoiced price is $2100 *<https://www.ariba.com|more>*",
+            "text": "•  Buyer rejected the invoice due to quantity mismatch –  5 laptops received instead of 10 invoiced *<https://www.ariba.com|more>*\n• I have also identified price variance of 5%. PO Price for laptop is $20,000 vs invoiced price is $2100 *<https://www.ariba.com|more>*",
         },
         {
             "color": "#f2c407",
-            "pretext": "*Recommendation's* Provided",
+            "pretext": "Here are the *recommendations* to fix the issues",
             "mrkdwn_in": ["pretext"]
         },
         {
             "color": "#f2c407",
-            "text": "*1.* Change Invoice Quantity to 5\n*2.* Adjust the invoice price to PO Price $2000\n*3.* Apply both changes *recommended*",
+            "text": "*1.* Change Invoice Quantity to 5 units\n*2.* Adjust the invoice price to PO Price $20,000\n*3.* Apply both changes *recommended*",
             "mrkdwn_in": ["text"]
         },
     ];
