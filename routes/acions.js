@@ -37,7 +37,7 @@ module.exports = {
         }
         console.log("Inside current_payment_info");
         // context="CurrentPaymentInfo";
-        bot.reply(message,"If you are approved today, you are scheduled to get paid $2,000 by April 30th, 2017");
+        bot.reply(message,"If you are approved today, you are scheduled to get paid $20,000 by April 30th, 2017");
     },
     get_payments:  function(bot, message)   {
         if(context != "InvoiceSubmitted")   {
@@ -321,7 +321,7 @@ function getAttachments()   {
         {
             "mrkdwn_in": ["text"],
             "color": "#f2c407",
-            "text": "•  Buyer rejected the invoice due to quantity mismatch –  5 laptops received instead of 10 invoiced *<https://www.ariba.com|more>*\n• I have also identified price variance of 5%. PO Price for laptop is $20,000 vs invoiced price is $2100 *<https://www.ariba.com|more>*",
+            "text": "•  Buyer rejected the invoice due to quantity mismatch –  5 laptops received instead of 10 invoiced *<https://www.ariba.com|more>*\n• I have also identified price variance of 5%. PO Price for laptop is $2000 vs invoiced price is $2100 *<https://www.ariba.com|more>*",
         },
         {
             "color": "#f2c407",
@@ -330,7 +330,7 @@ function getAttachments()   {
         },
         {
             "color": "#f2c407",
-            "text": "*1.* Change Invoice Quantity to 5 units\n*2.* Adjust the invoice price to PO Price $20,000\n*3.* Apply both changes *recommended*",
+            "text": "*1.* Change Invoice Quantity to 5 laptops or 5 units\n*2.* Adjust the invoice price to PO Price $2000\n*3.* Apply both changes *recommended*",
             "mrkdwn_in": ["text"]
         },
     ];
