@@ -37,7 +37,7 @@ module.exports = {
         }
         console.log("Inside current_payment_info");
         // context="CurrentPaymentInfo";
-        bot.reply(message,"If you are approved today, you are scheduled to get paid $20,000 by April 30th, 2017");
+        bot.reply(message,"If you are approved today, you are scheduled to get paid $40,000 by April 30th, 2017");
     },
     get_payments:  function(bot, message)   {
         if(context != "InvoiceSubmitted")   {
@@ -178,7 +178,7 @@ function messageBuilderPaymentImage() {
         "attachments": [
             {
                 "text": "Payment schedule",
-                "image_url": "https://peaceful-springs-59601.herokuapp.com/PaymentSchedule",
+                "image_url": "https://peaceful-springs-59601.herokuapp.com/PaymentSchedule1",
                 "color": "#3AA3E3"
             }
         ]
@@ -248,7 +248,7 @@ function submitInvoice(bot, message) {
                                         var attachments = getAttachments();
                                         attachments.push({
                                             "color": "#f2c407",
-                                            "text": "*@" + real_name + "* selected " + message.text +". \n All rules checked :white_check_mark: \n *Success!* *<https://123123.com|Invoice #" + invoice + ">* created and submitted to <https://google.com|Herge Oil> :white_check_mark: ",
+                                            "text": "*@" + real_name + "* selected to resubmit the invoice. \n All rules checked :white_check_mark: \n *Success!* *<https://123123.com|Invoice #" + invoice + ">* created and submitted to <https://google.com|Herge Oil> :white_check_mark: ",
                                             "mrkdwn_in": ["text"]
                                         });
                                         attachments.push({
