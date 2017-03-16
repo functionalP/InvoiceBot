@@ -45,7 +45,7 @@ function constructNotificationMessage(invoiceId) {
             {
                 "mrkdwn_in": ["text", "pretext"],
                 "color": "#ff0000",
-                "text": "*2* exceptions are reported with this invoice"
+                "text": "*1* Exception reported with this invoice"
             },
             {
                 "color": "#f2c407",
@@ -55,7 +55,7 @@ function constructNotificationMessage(invoiceId) {
                 "actions": [
                     {
                         "name": "details",
-                        "text": "Show Exceptions",
+                        "text": "Show Exception",
                         "type": "button",
                         "value": "details"
                     }

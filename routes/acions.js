@@ -123,7 +123,7 @@ function constructShowIssuesMessage(message) {
             {
                 "mrkdwn_in": ["text", "pretext"],
                 "color": "#ff0000",
-                "text": "*1* Exceptions reported with this invoice"
+                "text": "*1* Exception reported with this invoice"
             },
             {
                 "mrkdwn_in": ["text"],
@@ -296,7 +296,7 @@ function getAttachments()   {
             "mrkdwn_in": ["text"],
             "fallback": "Required plain-text summary of the attachment.",
             "color": "#ff0000",
-            "text": "*1* Exceptions reported with this invoice"
+            "text": "*1* Exception reported with this invoice"
         },
         {
             "mrkdwn_in": ["text"],
