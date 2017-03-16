@@ -123,12 +123,12 @@ function constructShowIssuesMessage(message) {
             {
                 "mrkdwn_in": ["text", "pretext"],
                 "color": "#ff0000",
-                "text": "*2* exceptions are reported with this invoice"
+                "text": "*1* Exceptions reported with this invoice"
             },
             {
                 "mrkdwn_in": ["text"],
                 "color": "#f2c407",
-                "text": "•  Buyer rejected the invoice due to quantity mismatch –  5 laptops received instead of 10 invoiced *<https://www.ariba.com|more>*\n• I have also identified price variance of 5%. PO Price for laptop is $2000 vs invoiced price is $2100 *<https://www.ariba.com|more>*",
+                "text": "•  Buyer rejected the invoice due to price variance of 10%.\nPO Price for Oil Rig is $40000 vs Invoiced price is $45000 more *<https://www.ariba.com|more>*",
                 "attachment_type": 'default',
                 "callback_id": "provideOptions",
                 "actions": [
@@ -146,43 +146,23 @@ function constructShowIssuesMessage(message) {
 function constructOptionsMessage(message)   {
     var attachments = getAttachments();
     attachments.push({
-        "pretext": "*Make the selection to resubmit the invoice*",
+        "pretext": "*Resubmit the invoice with recommendation*",
         "mrkdwn_in": ["pretext"],
         "callback_id": "applyFix",
         "actions": [
             {
-                "name": "Option 1",
-                "text": "1",
+                "name": "Yes",
+                "text": "Yes",
                 "type": "button",
-                "value": "Option 1",
-                "confirm": {
-                    "title": "Are you sure you want to re-submit the invoice?",
-                    "ok_text": "Yes",
-                    "dismiss_text": "No"
-                }
+                "value": "Yes",
+                "style": "primary"
             },
             {
-                "name": "Option 2",
-                "text": "2",
+                "name": "No",
+                "text": "No",
                 "type": "button",
-                "value": "Option 2",
-                "confirm": {
-                    "title": "Are you sure you want to re-submit the invoice?",
-                    "ok_text": "Yes",
-                    "dismiss_text": "No"
-                }
-            },
-            {
-                "name": "Option 3",
-                "text": "3",
-                "type": "button",
-                "value": "Option 3",
-                "style": "primary",
-                "confirm": {
-                    "title": "Are you sure you want to re-submit the invoice?",
-                    "ok_text": "Yes",
-                    "dismiss_text": "No"
-                }
+                "value": "No",
+                "style": "danger"
             }
         ]
     });
@@ -316,21 +296,21 @@ function getAttachments()   {
             "mrkdwn_in": ["text"],
             "fallback": "Required plain-text summary of the attachment.",
             "color": "#ff0000",
-            "text": "*2* exceptions are reported with this invoice"
+            "text": "*1* Exceptions reported with this invoice"
         },
         {
             "mrkdwn_in": ["text"],
             "color": "#f2c407",
-            "text": "•  Buyer rejected the invoice due to quantity mismatch –  5 laptops received instead of 10 invoiced *<https://www.ariba.com|more>*\n• I have also identified price variance of 5%. PO Price for laptop is $2000 vs invoiced price is $2100 *<https://www.ariba.com|more>*",
+            "text": "•  Buyer rejected the invoice due to price variance of 10%.\nPO Price for Oil Rig is $40000 vs Invoiced price is $45000 more *<https://www.ariba.com|more>*",
         },
         {
             "color": "#f2c407",
-            "pretext": "Here are the *recommendations* to fix the issues",
+            "pretext": " *Recommendation* ",
             "mrkdwn_in": ["pretext"]
         },
         {
             "color": "#f2c407",
-            "text": "*1.* Change Invoice Quantity to 5 laptops or 5 units\n*2.* Adjust the invoice price to PO Price $2000\n*3.* Apply both changes *recommended*",
+            "text": "*1.* Adjust the invoice price to PO Price $40000*",
             "mrkdwn_in": ["text"]
         },
     ];
