@@ -102,7 +102,7 @@ function constructShowIssuesMessage(message) {
         // "token": global.app_token,
         // "ts": message.message_ts,
         // "channel": message.channel,
-        "text": "*<https://fwefwefwef.com|Invoice 1411>* from <https://ssdfwefwe.com|Herge Oil> has been rejected",
+        "text": "*<https://fwefwefwef.com|Invoice "+global.invoice +">* from <https://ssdfwefwe.com|Herge Oil> has been rejected",
         "replace_original":true,
         "attachments": [
             {
@@ -128,7 +128,7 @@ function constructShowIssuesMessage(message) {
             {
                 "mrkdwn_in": ["text"],
                 "color": "#f2c407",
-                "text": "•  Buyer rejected the invoice due to price variance of 10%.\nPO Price for Oil Rig is $40000 vs Invoiced price is $45000 more *<https://www.ariba.com|more>*",
+                "text": "•  Buyer rejected the invoice due to price variance of 10%.\nPO Price for Oil Rig is $40000 vs Invoiced price is $45000 *<https://www.ariba.com|more>*",
                 "attachment_type": 'default',
                 "callback_id": "provideOptions",
                 "actions": [
@@ -277,7 +277,7 @@ function getAttachments()   {
     return [
         {
             "mrkdwn_in": ["pretext"],
-            "pretext": "*<https://slack.com|Invoice 1411>* from <https://google.com|Herge Oil> has been rejected",
+            "pretext": "*<https://slack.com|Invoice "+global.invoice +">* from <https://google.com|Herge Oil> has been rejected",
             "color": "#f2c407",
             "fields": [
                 {
@@ -301,7 +301,7 @@ function getAttachments()   {
         {
             "mrkdwn_in": ["text"],
             "color": "#f2c407",
-            "text": "•  Buyer rejected the invoice due to price variance of 10%.\nPO Price for Oil Rig is $40000 vs Invoiced price is $45000 more *<https://www.ariba.com|more>*",
+            "text": "•  Buyer rejected the invoice due to price variance of 10%.\nPO Price for Oil Rig is $40000 vs Invoiced price is $45000  *<https://www.ariba.com|more>*",
         },
         {
             "color": "#f2c407",
@@ -310,7 +310,7 @@ function getAttachments()   {
         },
         {
             "color": "#f2c407",
-            "text": "*1.* Adjust the invoice price to PO Price $40000*",
+            "text": "*1.* Adjust the invoice price to PO Price $40000",
             "mrkdwn_in": ["text"]
         },
     ];
