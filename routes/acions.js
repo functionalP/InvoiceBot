@@ -287,7 +287,7 @@ function getAttachments()   {
                 },
                 {
                     "title": "Total Amount",
-                    "value": "$45,000",
+                    "value": "$450,000",
                     "short": true
                 }
             ]
@@ -301,7 +301,7 @@ function getAttachments()   {
         {
             "mrkdwn_in": ["text"],
             "color": "#f2c407",
-            "text": "•  Buyer rejected the invoice due to price variance of 10%.\nPO Price for Oil Rig is $40000 vs Invoiced price is $45000  *<https://www.ariba.com|more>*",
+            "text": "•  Buyer rejected the invoice due to price variance of 10%.\nPO Price for Oil Rig is $400,000 vs Invoiced price is $450,000  *<https://www.ariba.com|more>*",
         },
         {
             "color": "#f2c407",
@@ -310,7 +310,7 @@ function getAttachments()   {
         },
         {
             "color": "#f2c407",
-            "text": "*1.* Adjust the invoice price to PO Price $40000",
+            "text": "*1.* Adjust the invoice price to PO Price $400,000",
             "mrkdwn_in": ["text"]
         },
     ];
