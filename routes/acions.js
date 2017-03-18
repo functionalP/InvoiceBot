@@ -37,7 +37,7 @@ module.exports = {
         }
         console.log("Inside current_payment_info");
         // context="CurrentPaymentInfo";
-        bot.reply(message,"If you are approved today, you are scheduled to get paid $40,000 by April 30th, 2017");
+        bot.reply(message,"If you are approved today, you are scheduled to get paid $400,000 by April 30th, 2017");
     },
     get_payments:  function(bot, message)   {
         if(context != "InvoiceSubmitted")   {
@@ -115,7 +115,7 @@ function constructShowIssuesMessage(message) {
                     },
                     {
                         "title": "Total Amount",
-                        "value": "$45,000",
+                        "value": "$450,000",
                         "short": true
                     }
                 ]
@@ -128,7 +128,7 @@ function constructShowIssuesMessage(message) {
             {
                 "mrkdwn_in": ["text"],
                 "color": "#f2c407",
-                "text": "•  Buyer rejected the invoice due to price variance of 10%.\nPO Price for Oil Rig is $40000 vs Invoiced price is $45000 *<https://www.ariba.com|more>*",
+                "text": "•  Buyer rejected the invoice due to price variance of 10%.\nPO Price for Oil Rig is $400,000 vs Invoiced price is $500,000 *<https://www.ariba.com|more>*",
                 "attachment_type": 'default',
                 "callback_id": "provideOptions",
                 "actions": [
