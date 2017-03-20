@@ -37,7 +37,7 @@ function constructNotificationMessage(invoiceId) {
                     },
                     {
                         "title": "Total Amount",
-                        "value": "$450,000",
+                        "value": "$560,000",
                         "short": true
                     }
                 ]
