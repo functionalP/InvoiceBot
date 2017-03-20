@@ -131,7 +131,7 @@ function constructShowIssuesMessage(message) {
                 "text": "•  Buyer rejected the invoice due to price variance of 10%.\nPO Price for Oil Rig is $500,000 vs Invoiced price is $560,000 *<https://www.ariba.com|more>*",
                 "attachment_type": 'default',
                 "callback_id": "provideOptions",
-                "actions": 
+                "actions": [
                     {
                         "name": "fix",
                         "text": "Need Help?",
